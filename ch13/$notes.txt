@@ -1,0 +1,56 @@
+***Chapter 13***
+XML
+import xml.etree.ElementTree as ET
+data = '''
+<person>
+  <name>Chuck</name>
+  <phone type="intl">
+    +1 734 303 4456
+  </phone>
+</person>'''
+tree = ET.formstring(data)
+print 'Name:, tree.find('name').text
+print 'Attr:', tree.find('email.get('hide)
+
+stuff = ET.fromstring(input)
+lst  stuff.findall('users/user')
+for item in lst:
+  print 'Name', item.find('name').text
+  print "id', item.find('id').text
+  print "Attribute', item.get('x')
+
+JSON
+import json
+
+input = '''
+[
+  { "id" ; "001",
+    "x" : "2", 
+    "name" : "Chuck"
+    ...
+  }
+] '''
+
+info = json.loads(input)
+print 'User count:', len(info)
+
+for item in info:
+  print 'Name', item['name']
+  print 'ID', item['id']
+  print 'Attribute', item['x']
+
+application-to-applicaton contaacts is an API
+API is a set of services that are available to other appplications
+SOA - Service-Oriented Architecture - functions from other services included in our program/service
+Advantages - one copy of data, the owners of the data can set the rules about the use of their data
+web services are APIs available over the web
+
+urllib.urlencode - pass a dictionary
+
+connection = urllib.urlopen(url)
+data = connection.read()
+headers = connection.info().dict
+print headers['x-rata-limit-remaining']
+
+Who is credited with the REST approach to web services?
+Roy Fielding

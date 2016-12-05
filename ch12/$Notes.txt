@@ -1,0 +1,30 @@
+***Chapter 12***
+SOCKETS
+import socket
+mysock = socket.socket(...)
+mysock.connect((...))
+mysock.send('GET {url} HTTP/1.0\n\n')
+data = mysock.recv(512)
+mysock.close()
+
+URLLIB
+fhand = urllib.urlopen('{url}')
+for line in fhand
+...
+
+PARSING WITH RE
+html = urllib.urlopen('{url}).read()
+links = re.findall('href="(http://.*?"', html)
+for line in links:
+...
+
+PARSING WITH BEAUTIFULSOUP
+from BeautifulSoup import *
+...
+html = urllib.urlopen(url).read()
+soup0 = BeautifulSoup(html)
+
+tags = coup('a)
+for tag in tags:
+    print tag.get('href', None)
+---
