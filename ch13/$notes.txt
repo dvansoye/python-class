@@ -54,3 +54,5 @@ print headers['x-rata-limit-remaining']
 
 Who is credited with the REST approach to web services?
 Roy Fielding
+
+*** End of notes ***

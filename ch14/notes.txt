@@ -1,0 +1,32 @@
+TABLE, ROW, COLUMN = RELATION, TUPLE, ATTRIBUTE
+
+import sqlite3
+
+conn = sqlite3.connect('music.sqlite3')
+cur = conn.cursor()
+
+cur.execute("DROP TABLE IF EXISTS Tracks')
+cur.execute('CREATE TABLE Tracks (title TEXT, plays Integer)')
+cur - conn.cursor()
+
+conn.close()
+
+CREATE TABLE IF NOT EXISTS Twitter 
+  (name TEXT, retrieved INTEGER, friends INTEGER)
+
+INSERT INTO Tracks (title, plays) VALUES ( ?, ? )', ('Thunderstruck', 20) )
+DELETE FROM Tracks WHERE plays < 100')
+SELECT * FROM Tracks WHERE title = 'My Way'
+SELECT name FROM Twitter WHERE retrieved = 0 LIMIT 1
+
+SELECT title, plays FROM Tracks ORDER BY title
+DELETE FROM Tracks WHERE title = 'My Way'
+UPDATE Tracks SET plays=16 WHERE title = 'My Way'
+
+DATA MODELING - the act of deciding how to reatk up your application data 
+into multiple tables and establising the relationships between the ables
+DATA MODEL - the design document that shows the tables and their relationships
+DATBASE NORMALIZATION - we should never put the same string data in the database 
+more than once.
+PRIMARY KEY - want SLQ to mange this column and assign a unique numberic key to each row we insert
+UNIQUE - ask SQL to not insert two rows with the same value
