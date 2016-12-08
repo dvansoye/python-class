@@ -28,5 +28,22 @@ into multiple tables and establising the relationships between the ables
 DATA MODEL - the design document that shows the tables and their relationships
 DATBASE NORMALIZATION - we should never put the same string data in the database 
 more than once.
-PRIMARY KEY - want SLQ to mange this column and assign a unique numberic key to each row we insert
+PRIMARY KEY - want SQL to mange this column and assign a unique numberic key to each row we insert
 UNIQUE - ask SQL to not insert two rows with the same value
+OR IGNORE - won't add a duplicate for a row that has a constraint
+
+cur.rowcount - number of records in the current cursor
+cur.lastrowid - used to find the value the database assign to a primary key field 
+
+Three kinds of keys 
+logical key - key in the real world - e.g., name - UNIQUE
+primary key - automatically assigned by the database. Used to link rows 
+    from different tables together
+foreign key - a number that points to the primary key of an assocated
+    row in a different tables
+    
+JOIN - reassemble data from multiple tables
+
+SELECT * FROM Follows JOIN People on Follows.from_id = People.id 
+    WHERE People.id = 1
+
